@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const Context = React.createContext(0)
+export const AppContext = React.createContext({ number: 0 })
 
 class AppProvider extends Component {
   state = {
@@ -8,10 +8,13 @@ class AppProvider extends Component {
   }
 
   render () {
+    const childrenWithProps = this.props.children.map(child => {
+      return React.cloneElement(child, { increment: this.increment, decrement: this.decrement })
+    })
     return (
-      <Context.Provider value={this.state.number}>
-        {React.cloneElement(this.props.children, { increment: this.increment, decrement: this.decrement })}
-      </Context.Provider>
+      <AppContext.Provider value={this.state.number}>
+        {childrenWithProps}
+      </AppContext.Provider>
     )
   }
 

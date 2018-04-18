@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AppContext } from '../context/AppContext'
+import { AppContext } from '../context/AppProvider'
 
 const NumberButton = props => {
   return (

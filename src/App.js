@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import AppProvider from './components/context/AppContext'
+import AppProvider from './components/context/AppProvider'
 import NumberButton from './components/button/NumberButton'
 
 const IncrementNumber = props => {
