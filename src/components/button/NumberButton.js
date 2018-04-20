@@ -13,7 +13,7 @@ const NumberButton = props => {
         <button
         {...rest}
         >
-        {children}{number}
+        {children} {number}
         </button>}
     </AppContext.Consumer>
   )
