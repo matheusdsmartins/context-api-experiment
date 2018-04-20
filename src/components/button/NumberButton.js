@@ -3,13 +3,17 @@ import React from 'react'
 import { AppContext } from '../context/AppProvider'
 
 const NumberButton = props => {
+  const {
+    children,
+    ...rest
+  } = props
   return (
     <AppContext.Consumer>
       {number =>
         <button
-        {...props}
+        {...rest}
         >
-        {number}
+        {children}{number}
         </button>}
     </AppContext.Consumer>
   )

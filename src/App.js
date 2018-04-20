@@ -8,7 +8,9 @@ const IncrementNumber = props => {
   return (
     <NumberButton
       onClick={props.increment}
-    />
+    >
+    Increment Context - 
+    </NumberButton>
   )
 }
 
@@ -16,7 +18,9 @@ const DecrementNumber = props => {
   return (
     <NumberButton
       onClick={props.decrement}
-    />
+    >
+    Decrement Context - 
+    </NumberButton>
   )
 }
 
@@ -26,10 +30,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">This is a experiment of the new React Context API</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
           <AppProvider>
             <IncrementNumber />
             <DecrementNumber />
